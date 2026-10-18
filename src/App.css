@@ -1,0 +1,63 @@
+/* App Layout & Responsive Styles */
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+}
+
+.app-main-layout {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.content-viewport {
+  flex: 1;
+  padding: 24px 32px 48px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .content-viewport {
+    padding: 20px 20px 40px;
+  }
+}
+
+@media (max-width: 860px) {
+  #mobile-menu-btn {
+    display: flex !important;
+  }
+
+  .nav-center-badges {
+    display: none !important;
+  }
+
+  .sidebar-container {
+    position: fixed !important;
+    top: 70px !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    height: calc(100vh - 70px) !important;
+    transform: translateX(-100%);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.7);
+  }
+
+  .sidebar-open {
+    transform: translateX(0) !important;
+  }
+
+  .sidebar-close-btn {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .content-viewport {
+    padding: 16px 14px 32px;
+  }
+}
